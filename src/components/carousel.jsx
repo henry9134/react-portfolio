@@ -21,12 +21,14 @@ export default function CarouselSection({ language }) {
         {language === 'en' ? 'Bootcamp Memories' : 'ブートキャンプの思い出'}
       </h2>
       <Swiper
-        modules={[Autoplay]}
-        spaceBetween={20}
-        slidesPerView={3}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        loop={true}
-      >
+  style={{ height: '250px' }}
+  modules={[Autoplay]}
+  spaceBetween={20}
+  slidesPerView={3}
+  autoplay={{ delay: 3000, disableOnInteraction: false }}
+  loop={true}
+>
+
         {images.map((src, i) => (
           <SwiperSlide key={i}>
             <img src={src} alt={`Slide ${i + 1}`} className="carousel-image" />
