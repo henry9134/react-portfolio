@@ -1,97 +1,75 @@
 .right-sidebar {
-  margin-top: 100px;
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  align-items: center; /* center everything */
-  width: 220px;         /* 🔒 fixed width */
+  gap: 12px;
+  z-index: 50;
 }
 
-
-/* Standard sidebar button */
-.sidebar-button,
-.sidebar-button:link,
-.sidebar-button:visited,
-.sidebar-button:hover,
-.sidebar-button:active {
-  display: inline-block;
-  background-color: #f8f8f8;
-  color: black;
-  padding: 20px 26px;
+.sidebar-button {
+  padding: 10px 16px;
+  background-color: white;
   border: none;
   border-radius: 8px;
   font-weight: bold;
-  text-align: center;
-  text-decoration: none !important;
-  margin-bottom: 10px;
   cursor: pointer;
-  width: 100%;
-
-  font-size: 14px;
-  font-family: inherit;
-  line-height: 1;
-  box-sizing: border-box;
-
-  transition: transform 0.15s ease, background-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s;
 }
 
 .sidebar-button:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);
+  background-color: #f0f0f0;
 }
 
-/* Make the anchor tag look like a button */
-.sidebar-button-link {
-  display: inline-block;
-  background-color: #f8f8f8;
-  color: black;
-  padding: 20px 26px;
-  border: none;
+.resume-dropdown {
+  position: relative;
+}
+
+.resume-menu {
+  position: absolute;
+  top: 110%;
+  right: 0;
+  background-color: white;
   border-radius: 8px;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none !important;
-  margin-bottom: 10px;
-  cursor: pointer;
-  width: 100%;
-
-  font-size: 14px;
-  font-family: inherit;
-  line-height: 1;
-  box-sizing: border-box;
-
-  transition: transform 0.15s ease, background-color 0.15s ease;
-}
-
-.sidebar-button-link:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);
-}
-
-/* Tech stack icons under the button */
-.sidebar-tech-grid {
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 12px;
+  flex-direction: column;
+  gap: 8px;
+  z-index: 100;
+  width: max-content;
+  white-space: nowrap;
+}
+
+.menu-item {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.menu-item:hover {
+  text-decoration: underline;
+  color: #111;
+}
+
+.sidebar-tech-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
   margin-top: 10px;
-  padding: 0 10px;
 }
 
 .sidebar-tech-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 60px;
+  gap: 8px;
+  font-size: 14px;
 }
 
 .sidebar-tech-item img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-.sidebar-tech-item span {
-  font-size: 10px;
-  margin-top: 4px;
-  text-align: center;
+  width: 24px;
+  height: 24px;
 }

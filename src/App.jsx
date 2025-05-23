@@ -16,7 +16,7 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* Floating language switcher */}
+      {/* Centered language switcher */}
       <div className="lang-switch" onClick={toggleLanguage}>
         {language === 'en' ? '日本語' : 'EN'}
       </div>

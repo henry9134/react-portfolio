@@ -11,6 +11,7 @@ import tailwindLogo from '../assets/tailwind.png';
 
 export default function RightSidebar({ language }) {
   const [showTech, setShowTech] = useState(false);
+  const [showResumeMenu, setShowResumeMenu] = useState(false);
 
   const stack = [
     { name: 'HTML5', icon: htmlLogo },
@@ -28,13 +29,34 @@ export default function RightSidebar({ language }) {
         {language === 'en' ? 'Projects' : 'プロジェクト'}
       </button>
 
-      <a
-        href="/Henry-santiago-FlowCV-Resume-20250414.pdf"
-        download
-        className="sidebar-button-link"
-      >
-        {language === 'en' ? 'Resume' : '履歴書/職務経歴書'}
+      <div className="resume-dropdown">
+  <button onClick={() => setShowResumeMenu(!showResumeMenu)} className="sidebar-button">
+   {language === 'en' ? (
+  'Resume download ▼'
+) : (
+  <>
+    履歴書/職務経歴書<br />
+    ダウンロード ▼
+  </>
+)}
+
+  </button>
+
+  {showResumeMenu && (
+    <div className="resume-menu">
+      <a href="/Henry-santiago-FlowCV-Resume-20250414.pdf" download className="menu-item">
+        📄 {language === 'en' ? 'English Resume' : '英語の履歴書'}
       </a>
+      <a href="/rirekisho.pdf" download className="menu-item">
+        📄 {language === 'en' ? 'Rirekisho (JP)' : '履歴書'}
+      </a>
+      <a href="/shokumu_keirekisho.pdf" download className="menu-item">
+        📄 {language === 'en' ? 'Shokumu Keirekisho (JP)' : '職務経歴書'}
+      </a>
+    </div>
+  )}
+</div>
+
 
       <button onClick={() => setShowTech(!showTech)} className="sidebar-button">
         {language === 'en' ? 'Tech Stack' : '技術スタック'}
