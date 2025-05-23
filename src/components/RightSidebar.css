@@ -1,0 +1,97 @@
+.right-sidebar {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center everything */
+  width: 220px;         /* 🔒 fixed width */
+}
+
+
+/* Standard sidebar button */
+.sidebar-button,
+.sidebar-button:link,
+.sidebar-button:visited,
+.sidebar-button:hover,
+.sidebar-button:active {
+  display: inline-block;
+  background-color: #f8f8f8;
+  color: black;
+  padding: 20px 26px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1;
+  box-sizing: border-box;
+
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.sidebar-button:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* Make the anchor tag look like a button */
+.sidebar-button-link {
+  display: inline-block;
+  background-color: #f8f8f8;
+  color: black;
+  padding: 20px 26px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none !important;
+  margin-bottom: 10px;
+  cursor: pointer;
+  width: 100%;
+
+  font-size: 14px;
+  font-family: inherit;
+  line-height: 1;
+  box-sizing: border-box;
+
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.sidebar-button-link:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+}
+
+/* Tech stack icons under the button */
+.sidebar-tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+  padding: 0 10px;
+}
+
+.sidebar-tech-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.sidebar-tech-item img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.sidebar-tech-item span {
+  font-size: 10px;
+  margin-top: 4px;
+  text-align: center;
+}

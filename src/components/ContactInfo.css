@@ -1,0 +1,20 @@
+.contact-info {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.4; /* reduce spacing between lines */
+  z-index: 10;
+}
+
+.contact-info p {
+  margin: 4px 0; /* reduce vertical margin */
+}
+
+.contact-info img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}

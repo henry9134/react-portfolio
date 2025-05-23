@@ -1,0 +1,186 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #f77f00;
+  text-decoration: inherit;
+}
+a:hover {
+  text-decoration: underline;
+  color: #ff9900;
+}
+
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.2s ease-in-out;
+}
+button:hover {
+  background-color: #f77f00;
+  color: white;
+  transform: translateY(-2px);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: url('/src/assets/bg.png') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  overflow-x: hidden;
+}
+
+.app {
+  position: relative;
+  min-height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 60px;
+  margin-top: 120px; /* Push content below floating contact/social icons */
+}
+
+h1, h2, h3 {
+  margin: 0;
+}
+
+.footer {
+  text-align: center;
+  padding: 30px;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  width: 100%;
+}
+
+.contact-info {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  color: white;
+  font-size: 16px;
+  line-height: 1.8;
+  z-index: 10;
+}
+
+.contact-info img {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.social-icons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 12px;
+  z-index: 10;
+}
+
+.social-icons a {
+  color: white !important;
+}
+
+.social-icons a:hover {
+  color: #0072b1 !important;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.right-sidebar {
+  position: absolute;
+  top: 120px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  z-index: 5;
+}
+
+.projects-container {
+  padding: 60px 0;
+  width: 100%;
+}
+
+.projects-container h2 {
+  font-size: 32px;
+  margin-bottom: 24px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.project-card {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  width: 300px;
+  color: white;
+  transition: transform 0.2s ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 32px;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+
+.lang-switch:hover {
+  color: #ffd700; /* Optional hover color */
+}
+
